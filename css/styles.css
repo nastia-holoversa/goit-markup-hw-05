@@ -630,55 +630,66 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .modal-form-messege::placeholder {
     color: rgba(46, 47, 66, 0.4);
 }
-.modal-checkbox {
-    margin-top: 16px;
+.modal-check-list {
+    margin-bottom: 24px;
 }
-.modal-check {
-    border-radius: 2px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
-.modal-send {
-
-}
-.modal-text {
+.modal-check-label {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    line-height: 1.17;
 }
-.modal-link {
-    line-height: 1.33;
+.modal-check-span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    line-height: 1.33333;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
 }
-.form-button {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 10px;
-    border-radius: 4px;
+input:checked+span {
+    background-color: #404bbf;
     border: none;
+    fill: #F4F4FD;
+}
+.modal-check-link {
+    color: #4d5ae5;
+}
+.modal-button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
     padding: 16px 32px;
     width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #4d5ae5;
     color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    margin: 24px 120px 24px 119px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
 }
-
 
 
    
