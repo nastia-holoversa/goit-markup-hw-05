@@ -462,18 +462,20 @@ align-items: baseline;
     inset: 0;
     z-index: 2;
     background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-
     width: 408px;
     min-height: 584px;
-    padding: 72px 24px;
+    padding: 72px 24px 24px 24px;
     background-color: #fcfcfc;
     border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
         0 1px 3px 0 rgba(0, 0, 0, 0.12),
         0 2px 1px 0 rgba(0, 0, 0, 0.2);  
@@ -488,19 +490,25 @@ align-items: center;
 min-width: 24px;
 min-height: 24px;
 padding: 0;
-border-radius: 100%;
+border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.1);
 background-color: #e7e9fc;
-stroke-width: 1px;
-stroke: rgba(0, 0, 0, 0.1);
-transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {    
-color: #404bbf;
-fill: #fff;
+background-color: #404bbf;
+border: none;
 }
 .modal-btn-icon {
 fill: #2e2f42;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn-icon:hover,
+.modal-btn-icon:focus {
+    stroke: #ffffff;
+    fill: #ffffff;
 }
 .modal-slogan {
     font-family: "Roboto", sans-serif;
@@ -521,7 +529,7 @@ fill: #2e2f42;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -535,7 +543,9 @@ fill: #2e2f42;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding: 11px 11px 11px 38px;
-    outline: none;
+    outline: transparent;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus {
     border-color: #4d5ae5; 
@@ -546,21 +556,29 @@ fill: #2e2f42;
     left: 16px;
     transform: translateY(-50%);
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus + .modal-form-icon {
     fill: #4d5ae5;
+}
+.modal-form-wrapper {
+    margin-bottom: 16px;
 }
 .modal-form-messege {
     width: 100%;
     height: 120px;
     resize: none;
+    padding: 8px 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    outline: none;
+    background-color: transparent;
+    outline: transparent;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-messege:focus {
     border-color: #4d5ae5;
