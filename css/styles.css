@@ -682,8 +682,8 @@ input[type="checkbox"]:checked~label .checkbox-part {
     background-color: #404bbf;
     border: none;
 }
-input[type="checkbox"]:checked~label .checkbox-part .checkbox-icon {
-    fill: #F4F4FD;;
+input[type="checkbox"]:checked~label .checkbox-icon {
+    fill: #F4F4FD;
 }
 .send-form {
     display: block;
